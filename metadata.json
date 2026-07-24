@@ -1,0 +1,6 @@
+{
+  "name": "Docx Yellow Overlay",
+  "description": "Aplicação Frutiger Aero para adicionar sobreposição amarela com 80% de transparência em documentos DOCX.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

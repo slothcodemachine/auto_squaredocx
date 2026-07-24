@@ -1,0 +1,218 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Frutiger Aero Glossy Reflections */
+  .aero-glass {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.45) 0%,
+      rgba(255, 255, 255, 0.15) 50%,
+      rgba(255, 255, 255, 0.25) 100%
+    );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 
+      inset 0 1px 1px rgba(255, 255, 255, 0.9),
+      inset 0 -1px 2px rgba(0, 100, 200, 0.2),
+      0 12px 32px rgba(0, 50, 120, 0.25);
+  }
+
+  .aero-glass-dark {
+    background: linear-gradient(
+      180deg,
+      rgba(15, 45, 90, 0.75) 0%,
+      rgba(8, 25, 55, 0.85) 100%
+    );
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(130, 210, 255, 0.4);
+    box-shadow: 
+      inset 0 1px 1px rgba(255, 255, 255, 0.5),
+      0 12px 35px rgba(0, 20, 60, 0.4);
+  }
+
+  .aero-button {
+    background: linear-gradient(
+      180deg,
+      #7cd7ff 0%,
+      #2f9de0 48%,
+      #007ad9 52%,
+      #005ba1 100%
+    );
+    border: 1px solid #004d88;
+    box-shadow: 
+      inset 0 1px 1px rgba(255, 255, 255, 0.8),
+      inset 0 -1px 1px rgba(0, 0, 0, 0.2),
+      0 2px 5px rgba(0, 60, 130, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 30, 80, 0.6);
+    transition: all 0.15s ease-in-out;
+  }
+
+  .aero-button:hover {
+    background: linear-gradient(
+      180deg,
+      #9ae3ff 0%,
+      #42b2f5 48%,
+      #138df0 52%,
+      #006ebc 100%
+    );
+    box-shadow: 
+      inset 0 1px 2px rgba(255, 255, 255, 0.9),
+      0 0 12px rgba(100, 210, 255, 0.8),
+      0 2px 8px rgba(0, 80, 180, 0.4);
+  }
+
+  .aero-button:active {
+    background: linear-gradient(
+      180deg,
+      #00508f 0%,
+      #0067b4 48%,
+      #007ad9 52%,
+      #3caaf0 100%
+    );
+    box-shadow: 
+      inset 0 2px 4px rgba(0, 20, 50, 0.5),
+      0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .aero-button-secondary {
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #e3f2fd 48%,
+      #bbdefb 52%,
+      #90caf9 100%
+    );
+    border: 1px solid #64b5f6;
+    color: #0d47a1;
+    box-shadow: 
+      inset 0 1px 1px rgba(255, 255, 255, 1),
+      0 2px 4px rgba(0, 80, 160, 0.15);
+  }
+
+  .aero-button-secondary:hover {
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #e1f5fe 48%,
+      #b3e5fc 52%,
+      #81d4fa 100%
+    );
+    box-shadow: 
+      inset 0 1px 1px rgba(255, 255, 255, 1),
+      0 0 8px rgba(129, 212, 250, 0.6);
+  }
+
+  .aero-titlebar {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(210, 240, 255, 0.5) 45%,
+      rgba(150, 210, 255, 0.3) 50%,
+      rgba(180, 230, 255, 0.5) 100%
+    );
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  }
+
+  .aero-card {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.75) 0%,
+      rgba(235, 248, 255, 0.65) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 
+      inset 0 1px 0 rgba(255, 255, 255, 1),
+      0 4px 15px rgba(0, 80, 160, 0.12);
+  }
+
+  .aero-input {
+    background: linear-gradient(
+      180deg,
+      rgba(240, 248, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.95) 100%
+    );
+    border: 1px solid #78c0ed;
+    box-shadow: 
+      inset 0 1px 3px rgba(0, 60, 120, 0.15),
+      0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  .aero-input:focus {
+    outline: none;
+    border-color: #0078d7;
+    box-shadow: 
+      inset 0 1px 2px rgba(0, 60, 120, 0.2),
+      0 0 8px rgba(0, 120, 215, 0.5);
+  }
+
+  .aero-progress-striped {
+    background-image: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.35) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.35) 50%,
+      rgba(255, 255, 255, 0.35) 75%,
+      transparent 75%,
+      transparent
+    );
+    background-size: 24px 24px;
+    animation: aero-stripe-move 1.2s linear infinite;
+  }
+}
+
+@keyframes aero-stripe-move {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 24px 0;
+  }
+}
+
+@keyframes float-bubble {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-25px) scale(1.05);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.4;
+  }
+}
+
+.animate-float-slow {
+  animation: float-bubble 6s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float-bubble 4s ease-in-out infinite;
+}
+
+/* Custom Frutiger Aero scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(210, 240, 255, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #70c4ff, #0073e6);
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #94d4ff, #0088ff);
+}
